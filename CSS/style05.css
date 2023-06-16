@@ -1,0 +1,65 @@
+.flex{
+    display: flex;
+    justify-content: flex-end;
+}
+
+input[type=checkbox]{
+    font-size: 16px;
+}
+
+input[type=checkbox]+label{
+    font-weight: bold;
+    color: #000;
+}
+
+div{
+    width: 670.4px
+}
+
+#red:checked+label{
+    background-color: red;
+    color: #fff;
+}
+
+#blue:checked+label{
+    background-color: blue;
+    color: #fff;
+}
+
+#yellow:checked+label{
+    background-color: yellow;
+    color: #000;
+}
+
+.button{
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: salmon;
+    border-radius: 8px;
+    border-width: 0;
+    margin-left: auto;
+    display: block;
+}
+
+.button:active{
+    background-color: #ddd;
+    color: salmon;
+    font-weight:lighter;
+}
+
+h2:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+textarea{
+    border-radius: 5px;
+}
+
+textarea:hover{
+    border: 2px solid #000;
+    background-color: lavenderblush;
+}
