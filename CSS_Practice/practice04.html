@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: steelblue;
+        opacity: 0.5;
+    }
+    /*
+     * 또는 body에 넣으면 됨-pm 12:29 
+    *에다 스타일 지정하면 안예쁘게 됨....
+    */
+    h2{
+        color: greenyellow;
+        text-align: center;
+    }
+    .calender{
+        background-color: steelblue;
+        color: #fff;
+    }
+
+    .calender tr td .holiday{
+        color: salmon;
+    }
+
+    .calender tr td:first-child, .calender tr th:first-child{
+        color: salmon;
+    }
+
+    .calender tr td:last-child, .calender tr th:last-child{
+        color: darkblue;
+    }
+
+</style>
+<body>
+    <div class="calender">
+        <h2>2023년 6월</h2>
+        <table width="100%" align="center" cellspacing="30">
+            <tr>
+                <th>일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td class="holiday">6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+            </tr>
+        </table>
+    </div>
+ 
+</body>
+</html>

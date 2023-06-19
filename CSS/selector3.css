@@ -38,3 +38,58 @@ input#rabbit:checked + label{
     background-color: pink;
     color: white;
 }
+
+/* 
+    -E:first-child{} : E가 첫번째 자식이라면 선택
+    -E:last-child : E가 마지막 자식이라면 선택
+    -E:nth-child(n) : E가 n번째 자식이라면 선택
+    -E:nth-of-type : E요소 중에 n번째를 선택
+    -E:not(XYZ) : XYZ가 아닌 E요소를 선택
+*/
+
+.zoo>*{
+    background-color: green;
+    color: #fff;
+    font-size: 20px;
+}
+
+.zoo>li:last-child{
+    background-color: #000;
+}
+
+.zoo >li:first-child{
+    background-color: yellow;
+}
+
+.zoo>li:nth-of-type(1){
+    background-color: blue;
+}
+
+.zoo>*:first-child{
+    background-color: yellowgreen;
+}
+
+.zoo > li:nth-child(odd){
+background-color: pink;
+}
+
+/* odd=2n+1 */
+
+/* 가상 요소 선택자 */
+/* ::after, ::before */
+.h3{
+    background-color: yellow;
+}
+
+.h3::after{
+    content: ' after';
+    color: gray;
+}
+
+.h3::before{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 50px;
+    background-color: red;
+}
