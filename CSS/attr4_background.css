@@ -1,0 +1,28 @@
+.background-image{
+    width: 500px;
+    height: 800px;
+    /* background: red; */
+    border: 1px solid black;
+    background-image: url('./img/small.png');
+    background-repeat: no-repeat;
+    /* 1. background-repeat
+    - repeat (default): x축, y축으로 반복 
+    - repeat-x : x축으로만 반복
+    - repeat-y : y축으로만 반복
+    - no-repeat :반복하지 않아요
+    */
+    background-position: center;
+    /* background-position: center top;
+    background-position: 100px 200px; */
+    /* background-position
+    - 이미지의 위치를 지정
+    - 첫번재로 오는 속성은 x축, 두번째로 오는 속성은 y축
+    - 키워드(top, bottom, left, right, center) / 단위와 함께 쓰는 숫자
+     */
+     background-size: 50px;
+     background-size: 100px 300px;
+     background-size: contain;
+     /* 단위, contain, cover */
+
+     background-attachment: fixed;
+}
