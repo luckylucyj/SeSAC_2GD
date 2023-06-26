@@ -1,0 +1,87 @@
+/* transition vs. animation
+    - transition
+        - hover, onclick, active, 등의 이벤트에 의해 발생됨     
+    - anmation
+        - '중간 스텝' 을 지정해 보다 세밀한 스타일 전환 가능
+        - keyframes를 사용
+*/
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: dodgerblue;
+    position: relative;
+    animation-name: box;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+}
+
+@keyframes box{
+    0%{
+        left: 0px;
+    }
+
+    25%{
+        left:100px;
+    }
+
+    50%{
+        left: 200px;
+    }
+
+    75%{
+        left:100px;
+    }
+
+    100%{
+        left:0;
+    }
+}
+
+.ball{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #000;
+    animation: bounce1 1s ease-out infinite alternate;
+    /* 단축 속성 */
+}
+
+@keyframes bounce1{
+    to{
+        top:0px;
+    }
+
+    from{
+        top:300px;
+    }
+
+}
+
+.ball2{
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    position: absolute;
+    left: 200px;
+    border-radius: 50%;
+    animation: bounce2 5s infinite;
+    /* animation */
+}
+
+@keyframes bounce2{
+    to, from{
+        bottom: 0px;
+        animation-timing-function: ease-out;
+        background-color: yellow;
+    }
+
+    50%{
+        bottom: 300px;
+        animation-timing-function: ease-in;
+        background-color: red;
+    }
+}

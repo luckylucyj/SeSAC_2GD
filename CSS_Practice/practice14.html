@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap div{
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            border-radius: 8px;
+            border: 1px solid red;
+            margin-left: 15px;
+        }
+
+        @media (max-width: 699px){
+            .wrap{
+                flex-direction: column;
+            }
+            .wrap div{
+                background-color: skyblue;
+                border-color: #000;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
