@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 내가 푼 문제-pm 12:50 start */
+
+        /* .container{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .item1{
+            background-color: #F94144;
+            grid-column: 1 / 5;
+        }
+
+        .item2{
+            background-color: #F3722C;
+            grid-row: 2 / 4;
+        }
+
+        .item3{
+            background-color: #F9C74F;
+            grid-column: 2 / 4;
+        }
+
+        .item4{
+            background-color: #43AA8B;
+            grid-row: 2 / 4;
+            grid-column: 4 / 5;
+        }
+
+        .item5{
+            background-color: #F8961E;
+            grid-column: 2 / 3;
+        }
+
+        .item6{
+            background-color: #90BE6D;
+            grid-column: 3 / 4;
+        }
+
+        .item7{
+            background-color: #4444FF;
+            grid-column: 1 / 5;
+        }
+
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+    /* 내가 푼 문제-pm 12:50 end */
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            background-color: aliceblue;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item1{
+            background-color: #F94144;
+            grid-column: 1 / span 6;
+        }
+
+        .item2{
+            background-color: #F3722C;
+            grid-row: 2 / 4;
+        }
+
+        .item3{
+            background-color: #F9C74F;
+            grid-column: 2 / 6;
+        }
+
+        .item4{
+            background-color: #43AA8B;
+            grid-column: 6 / 7;
+            grid-row: 2 / span 2;
+        }
+
+        .item5{
+            background-color: #F8961E;
+            grid-column: 2 / 4;
+        }
+
+        .item6{
+            background-color: #90BE6D;
+            grid-column: 4 / 6;
+        }
+
+        .item7{
+            background-color: #4444FF;
+            grid-column: 1 / 7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">#F94144</div>
+        <div class="item item2">#F3722C</div>
+        <div class="item item3">#F9C74F</div>
+        <div class="item item4">#43AA8B</div>
+        <div class="item item5">#F8961E</div>
+        <div class="item item6">#90BE6D</div>
+        <div class="item item7">#4444FF</div>
+    </div>
+</body>
+</html>
