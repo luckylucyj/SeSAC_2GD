@@ -19,8 +19,14 @@
     let emp = null;
     console.log("typeof 를 Array 이나 null 에 사용하면, " + '"' + typeof emp + '"' + ' 결과를 얻을 수 있습니다.');
 
-    let mathScore = 77;
-    let engScore = 88;
+    // let mathScore = 77;
+    // let engScore = 88;
+    
+    // let promptObj = prompt('평균 시험 점수', avgScore + "점");
+    let engScore = prompt('당신의 영어 점수는?');
+    engScore=Number(engScore);
+    let mathScore= prompt('당신의 수학 점수는?');
+    mathScore=Number(mathScore);
     let avgScore = (mathScore + engScore) / 2;
-    let promptObj = prompt('평균 시험 점수', avgScore + "점");
+    prompt(avgScore);
 </script>

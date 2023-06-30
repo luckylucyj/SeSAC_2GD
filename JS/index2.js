@@ -139,6 +139,7 @@ console.log(typeof String(str2));
 console.log(typeof String(str3));
 // 저 콘솔 되는 순간만 string이 됨-pm 4:36
 
+console.log('-----typeof1-----');
 console.log(typeof str1.toString());
 
 // 2. 숫자
