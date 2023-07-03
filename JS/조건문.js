@@ -39,7 +39,7 @@ if (number > 10) {
 // 61 ~ 70 D
 // 나머지는 F
 
-// if(number <=100 && number>=90){
+// if(number <=100 && number>=90){  
 //     console.log('A');
 // } else if(number >= 80){
 //     console.log('B');
