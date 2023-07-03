@@ -86,7 +86,7 @@ console.log(Math.round(5.6));
 //반올림
 //-pm 3:27
 
-// 난스 생성 - >random number
+// 난수 생성 - >random number
 //0<= num<1;
 console.log(Math.random());
 
@@ -121,5 +121,5 @@ const areaNum = {
     Jeju: "064",
   };
 
-console.log(Object.keys(areaNUm));
-console.log(Object.values(areaNUm));
+console.log(Object.keys(areaNum));
+console.log(Object.values(areaNum));
