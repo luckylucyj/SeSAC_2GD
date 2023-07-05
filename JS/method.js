@@ -201,6 +201,7 @@ let findResult2= multiArr.find((el)=> el>7);
 //화살표 함수에는 중괄호를 쓰지 않아도 됨, 그리고 중괄호를 쓰지 않았을 때는 리턴이 필요없음-pm 2:20
 
 /* for in */
+console.log('for in')
 const areaNum = {
     Seoul: "02",
     Incheon: "032",
@@ -214,12 +215,12 @@ const areaNum = {
 
   const arr=['a','b','c','d'];
   for(let area in areaNum){
-    console.log(area);
+    // console.log(area);
     // areaNum.Seoul
     // areaNum['Seoul']
     //for in 접근할 때 대괄호 접근법으로 접근하기-pm 2:46
 
-    console.log(areaNum.area)
+    console.log(areaNum[area])
     // area==seoul
     // -pm 2:48
 

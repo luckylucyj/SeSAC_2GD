@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz1</title>
+</head>
+<body>
+    <div> 민트초코는<span> 맛있다>-<</span></div>
+    <img class="yore" src="../CSS/img/pooh.png" alt="pooh" id="pooh">
+    <p>이요르</p>
+    <script>
+        // const mc= document.querySelector('span')
+        // mc.innerText='맛없다!!'
+
+        document.querySelector('span').innerText='맛없다!!';
+//img 태그
+//1.src eeyore.png로 변경
+//2. alt '이요르'로 변경
+//3. 가로 크기 150으로 변경
+
+        // const eeyore= document.querySelector('p');
+        // eeyore.setAttribute('src','eeyore.png');
+
+        // const yore=document.querySelector('.yore');
+        // yore.getAttribute('alt');
+        // yore.alt="이요르";
+
+
+        // yore.style.width='150px';
+        const img= document.querySelector('img');
+        img.src='./img/eeyore.png';; //점으로 속성변경-am 11:57
+
+        img.alt="이요르";
+        img.setAttribute('width', '150');
+    </script>
+
+</body>
+</html>
