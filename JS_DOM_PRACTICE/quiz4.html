@@ -40,6 +40,7 @@
       .text-center {
         text-align: center;
       }
+
     </style>
   </head>
   <body>
@@ -101,27 +102,52 @@
         "뮤! 넌 내거야",
         "오레오 쿠키 앤 크림",
       ];
-    //   icecreams.forEach((el)=>{
-    //     console.log(el);
-    //     el.setAttribute('style', 'color:blueviolet; font-weight: 700;');
-    // })
 
+    
+    // for(i=0; i<icecreams.length; i++){
+      
+    //   const img=document.createElement('img');
+    //   const h3=document.createElement('h3');
+    //   const div=document.createElement('div');
+    //   const article=document.createElement('article');
+
+    //   section.classList.add('article');
+    //   article.classList.add('article-box');
+    //   img.classList.add('img-box');
+    //   img.src=`./img/icecream${i+1}.png`;
+    //   h3.classList.add('text-center');
+    //   h3.innerText=`Top${i+1}`;
+    //   div.innerText=icecreams[i];
+    //   div.classList.add('text-center');
+
+
+    //   article.append(img,h3,div);
+    //   section.append(article);
+    //   }
+
+    for(i=0; i<icecreams; i++){
+      const article=document.createElement('article');
       const img=document.createElement('img');
-      const h3=document.createElement('h3');
-      const div=document.createElement('div');
+      const h3=document=createElement('h3');
+      const name=document.createElement('div');
 
-      const article =document.createElement('article');
-        img.setAttribute("src", `./img/icecream${area}.png`);
+      //img
+      img.setAttribute('src',`./img/icecream${i+1}.png`);
+      img.classList.add('img-box');
+      img.setAttribute('alt',`./img/icecream${i+1} 사진`);
+      
+      // h3
+      h3.textContent=`Top ${i+1}`;
+      h3.classList.add('text-center');
 
-        h3.innerText=`Top${area}`;
-        div.innerText=icecreams[area];
-        article.appeand(img,h3,div);
+      // div
+      name.innerText=icecreams[i];
+      name.classList.add('text-ceter');
 
-      for(let area in icecreams){
-
-      }
-
+      article.append(img, h3, name);
+      article.classList.add('article-box');
       section.append(article);
+    }
     </script>
   </body>
 </html>

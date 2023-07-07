@@ -51,7 +51,7 @@ const list = document.querySelectorAll("li");
 //     li.style.fontSize='1.3rem';
 // }
 
-// 3-2. classList 사용- style속성으로 지정해도 되지만 인라인으로 지정하는거라 개수가 많아지면 일일이 타이핑한다는 단점이 있는데 그걸 대채할 수 있음-am 10:53
+// 3-2. classList 사용- style속성으로 지정해도 되지만 인라인으로 지정하는거라 개수가 많아지면 일일이 타이핑한다는 단점이 있는데 그걸 대체할 수 있음-am 10:53
 console.log(h1.classList);
 h1.classList.add("add-h1");
 // h1.classList.remove('add-h1');
