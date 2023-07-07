@@ -70,14 +70,20 @@
 
     //   });
     // 답안 end
-
-    const container=document.querySelector('container');
+    const btn=document.querySelector('button');
+    const body=document.querySelector('body');
     const h2=document.querySelector('h2');
 
-    const r=random.math()*256;
-    const g=random.math()*256;
-    const b=random.math()*256;
-    h2.innerText=`( ${r},${g},${b})`;
+    btn.addEventListener('click', function(){
+      let r=Math.floor(Math.random() * 255);
+      let g=Math.floor(Math.random() * 255);
+      let b=Math.floor(Math.random() * 255);
+      const random=`rgb(${r},${g},${b})`;
+      body.style.backgroundColor=random;
+      h2.innerText=random;
+      console.log(random);
+    })
+
 
 
       // ================================================================================================
