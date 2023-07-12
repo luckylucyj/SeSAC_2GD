@@ -57,6 +57,16 @@ header .inner .menu li{
     font-weight: bold;
 }
 
+header .small-menu .fa-bars{
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    line-height: 60px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
 /* 768px 이하일 때 header */
 
 header .small-menu{
@@ -70,6 +80,11 @@ header .small-menu li{
     width: 100%;
     height: 3rem;
     line-height: 3rem;
+    display: none;
+}
+
+header .small-menu li.on{
+    display: block;
 }
 
 /* 미디어 쿼리 작성 768px 이하일 때 */

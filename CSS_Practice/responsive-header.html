@@ -6,6 +6,7 @@
     <title>반응형 헤더 만들기</title>
     <script src="https://kit.fontawesome.com/9cc3a35e4e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./responsive-header.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -18,13 +19,19 @@
                 <li>메뉴4</li>
             </ul>
         </div>
-
+        
         <ul class="small-menu">
             <li>메뉴1</li>
             <li>메뉴2</li>
             <li>메뉴3</li>
             <li>메뉴4</li>
+            <i class="fa-solid fa-bars"></i>
         </ul>
     </header>
+    <script>
+        $('.fa-bars').click(function(){
+            $('.small-menu li').toggleClass('on');
+        })
+    </script>
 </body>
 </html>
