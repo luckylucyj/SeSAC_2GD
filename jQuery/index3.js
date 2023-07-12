@@ -5,7 +5,7 @@ console.log(document);
 console.log($(document));
 // mouse event
 // click
-// on은 addEventListen와 같은 의미
+// on은 addEventListener와 같은 의미
 // $('.p-msg').on('click',function(){
 //     this.css('color','blue');
 //     // $('.p-msg').css('color','blue'); //this는 자기 자신을 의미
