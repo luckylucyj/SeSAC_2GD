@@ -74,7 +74,7 @@ arr1.pop();
 console.log(arr1.pop());
 console.log(arr1);
 
-let arr2=[' quakka', 'puppy','rabbit','hamster'];
+let arr2=['quakka', 'puppy','rabbit','hamster'];
 arr2.unshift('고양이');
 arr2.unshift('쥐');
 console.log(arr2);
@@ -110,7 +110,7 @@ let alphabets= ['a','b','c','d','e','f'];
 for(let i=0; i < arr3.length; i++){
     console.log(arr3[i]);
 }
-
+console.log('------------number');
 for(let number of arr3){
     console.log(number);
 }

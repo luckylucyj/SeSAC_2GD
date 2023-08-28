@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    ul p {
+        width: 200px;
+    }
+
+    ul img {
+        margin: 1rem;
+    }
+</style>
+    </style>
+  </head>
+  <body>
+    <h1>OPEN API 사용</h1>
+    <h2>랜덤 고양이 사진 가지고 오기</h2>
+    <div id="cat">
+      <button onclick="location.reload()">사진바꾸기</button>
+    </div>
+
+    <h2>영화 API 가지고 오기</h2>
+    <h4></h4>
+    <ul></ul>
+    <script>
+      fetch("https://api.thecatapi.com/v1/images/search")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          console.log(data[0]);
+          const img = document.createElement("img");
+          img.src = data[0].url;
+          img.alt = `cat-${data[0].id}`;
+          img.width = 200;
+
+          document.querySelector("#cat").prepend(img);
+        });
+
+      // http://img.omdbapi.com/?apikey=c7ea567d&
+      async function getMovieData() {
+        let word='red';
+        // fetch로 데이터 불러오기
+        const response=await fetch(`http://www.omdbapi.com/?apikey=c7ea567d&s=${word}`,
+        {
+            method:'GET',
+        }
+        );
+        const movieData=await response.json();
+        console.log(movieData.Search);
+
+        // html
+        const h4=document.querySelector('h4');
+        h4.innerText = ` 영화 검색 키워드 :${word}`;
+        [
+            {
+                Title:'fsfsf',
+                Poster:'~~~.jpg'
+            },
+            {
+                Title:'fsfsf',
+                Poster:'~~~.jpg'
+            }
+        ]
+        for(let movie of movieData.Search){
+            const ul=document.querySelector('ul');
+            const div=document.createElement('div');
+            const img=document.createElement('img');
+            const p=document.createElement('p');
+            img.setAttribute('src', movie.Poster);
+            img.setAttribute('alt', movie.Title);
+            p.innerText=movie.Title;
+            div.append(img,p);
+            ul.append(div);
+            // append는 두개도 한번에 붙일 수 있음-pm12:05
+        }
+    }
+    getMovieData();
+    </script>
+  </body>
+</html>

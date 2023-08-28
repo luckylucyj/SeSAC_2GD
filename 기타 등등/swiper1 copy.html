@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- swiper CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <!-- swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        .swiper{
+            width: 100%;
+            background-color: antiquewhite;
+            height: 200px;
+        }
+
+        .swiper .swiper-wrapper .swiper-slide{
+            width: 200px;
+            height: 100%;
+            border: 1px solid blue;
+            text-align: center;
+            line-height: 100px;
+            box-sizing: border-box;
+            font-size: 25px;
+            line-height: 200px;
+        }
+        /* pagination 커스텀*/
+        .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            border: 1px solid black;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+            transition: width .5s;
+            width: 40px;
+            border-radius: 5px;
+            background-color: yellow;
+            border: 1px solid transparent;
+        }
+
+        /* 화살표 커스텀 */
+        .swiper1 .swiper-button-prev,
+        .swiper1 .swiper-button-next{
+            color: #555;
+        }
+
+        section{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+
+        article {
+        position: relative;
+        height: 100vh;
+        background-color: skyblue;
+        overflow: hidden;
+      }
+
+      article .swiper3 {
+        position: absolute;
+        /* left 는 자유롭게 설정해서 다음페이지 보이는 정도 결정 */
+        left: 40%;
+        /* 중앙 정렬 */
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+
+        /* height는 임의로 설정한 것이니 변경시켜주는것이 좋을 것 같습니다. */
+        height: 500px;
+      }
+      article .swiper3 img {
+        /* 하나의 스와이퍼 기준으로 왼쪽 정렬, position 이 아닌 다른 속성으로 하셔도 될 것 같습니다. */
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <article>
+        <div class="swiper swiper3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/Blueberry & Raspberry packaging.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./img/Blueberry & Raspberry packaging.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./img/Blueberry & Raspberry packaging.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./img/Blueberry & Raspberry packaging.png" alt="" /></div>
+            <div class="swiper-slide"><img src="./img/Blueberry & Raspberry packaging.png" alt="" /></div>
+          </div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </article>
+
+    <script>
+        const sw=new Swiper(".swiper1",{
+            // direction:'vertical',
+            slidesPerView:3,
+            spaceBetween: 6, //slide 간의 gap(margin)
+            loop: true,
+            autoplay:{
+                delay: 1000,
+            },
+            speed: 1000, //like transition
+
+            navigation:{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination:{
+                el:'.swiper-pagination',
+                clickable:true,
+            },
+            scrollbar:{
+                el:'.swiper-scrollbar',
+            },
+        });
+
+        const setSwiper2={
+            slidePerView:2,
+            loop: false,
+            speed: 5000,
+            navigation:{
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            //반응형
+            breakpoints:{
+                // 768보다 클 때
+                768:{
+                    slidesPerView:4,
+                },
+            }
+        };
+        const sw2=new Swiper('.swiper2', setSwiper2);
+
+                  // swiper 설정
+  const setSwiper3 = {
+    slidesPerView: 2, 
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+    },
+  };
+ const swiper3 = new Swiper('.swiper3', setSwiper3);
+ 
+ //article 누르면 동시에 next button 누르도록
+ const article = document.querySelector('article');
+ article.addEventListener('click', () => {
+    document.querySelector('.swiper3 .swiper-button-next').click();
+ });
+    </script>
+  </body>
+</html>
