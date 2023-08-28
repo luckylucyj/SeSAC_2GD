@@ -22,7 +22,7 @@ class ClassProps2 extends Component {
     const { name, bgColor, nickname, fontColor } = this.props;
     return (
       // <div style={{backgroundColor:bgColor, color:fontColor}}></div>
-      <div style={{backgroundColor: bgColor, color: fontColor}}>
+      <div style={{ backgroundColor: bgColor, color: fontColor }}>
         <h2>hi, {name}</h2>
         <ul>
           <li>별명 :{nickname}</li>
@@ -31,9 +31,9 @@ class ClassProps2 extends Component {
       </div>
     );
   }
-//   static defaultProps={
-//     fontColor:'beige',
-//   };
+  //   static defaultProps={
+  //     fontColor:'beige',
+  //   };
 }
 
 ClassProps2.defaultProps = {
