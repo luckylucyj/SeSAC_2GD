@@ -1,0 +1,27 @@
+.box2{
+    background-color: gainsboro;
+}
+
+.box2 div{
+    background-color: pink;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.first{
+    color: darkorange;
+    font-size: 1.5rem;
+}
+
+.second{
+    background-color: black;
+    border:  1px solid darkorange;
+}
+
+.stateVal2{
+    border-radius: 10px;
+}

@@ -1,33 +1,57 @@
-// import UseJSX from "./components/UseJSX.js";
-// import FirstPractice from "./components/practice/FirstPractice.js";
-// import ClassCom from "./components/ClassCom.js"
-// import FunctionState from "./components/FunctionState.jsx";
+import React from "react";
+import logo from "./logo.svg";
+import styled, { keyframes } from "styled-components";
 
-import FunctionProps from "./components/FunctionProps";
-import { ClassProps, ClassProps2 } from "./components/practice/ClassProps";
-/*클래스로 할 때는 익스포트 디포트가 아니라서 객체로 불러옴-pm 4:20 */
-import PracticeProps from "./components/practice/PracticeProps";
-
-// import ClassState from "./components/ClassState.jsx"
-// import Increasing from "./components/practice/Increasing.jsx";
 function App() {
-  return (
-    <div>
-      {/* <UseJSX />
-      <FirstPractice />
-      <ClassCom></ClassCom>
-      <FunctionState></FunctionState>
-      <ClassState></ClassState>
-      <Increasing></Increasing> */}
+  // styled-components import
+  const rotate = keyframes`
+0%{
+  transform: rotate(0);
+}
+100%{
+  transform: rotate(360deg);
+}
+`;
+  const AppLogo = styled.img`
+    animation: ${rotate} 20s infinite linear;
+    height: 40vmin;
+    pointer-events: none;
+  `;
 
-      <FunctionProps name='사과' krPrice={5000} number={10}></FunctionProps>
-      <FunctionProps name='샤인머스켓' krPrice={35000} number={3}></FunctionProps>
-      <FunctionProps name='복숭아' children="안녕하세요 칠드런"></FunctionProps>
-      <FunctionProps>여기가 children입니다!</FunctionProps>
-      <PracticeProps day='오늘 '></PracticeProps>
-      <ClassProps name='뽀로로' nickname='사고뭉치' color='#0186cb'></ClassProps>
-      <ClassProps2 name='루피' nickname='공주' bgColor='#ed9095'></ClassProps2>
-    </div>
+  const RootDiv = styled.div`
+  text-align: center;
+  `;
+
+  const AppHeader = styled.header`
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  `;
+
+  const MyA = styled.a`
+    color: #61dafb;
+  `;
+  return (
+    <RootDiv>
+      <AppHeader>
+        <AppLogo src={logo} alt="app" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <MyA
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </MyA>
+      </AppHeader>
+    </RootDiv>
   );
 }
 
