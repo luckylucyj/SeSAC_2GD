@@ -1,17 +1,21 @@
 import React from "react";
 import logo from "./logo.svg";
+import './styles/style.scss';
 import styled, { keyframes } from "styled-components";
+import UseScss from './components/UseScss';
+import UseMemoObj from "./components/05_UseMemoObj";
 
 function App() {
   // styled-components import
   const rotate = keyframes`
-0%{
-  transform: rotate(0);
-}
-100%{
-  transform: rotate(360deg);
-}
-`;
+    0%{
+      transform: rotate(0);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+    `;
+
   const AppLogo = styled.img`
     animation: ${rotate} 20s infinite linear;
     height: 40vmin;
@@ -19,7 +23,7 @@ function App() {
   `;
 
   const RootDiv = styled.div`
-  text-align: center;
+    text-align: center;
   `;
 
   const AppHeader = styled.header`
@@ -37,22 +41,11 @@ function App() {
     color: #61dafb;
   `;
   return (
-    <RootDiv>
-      <AppHeader>
-        <AppLogo src={logo} alt="app" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <MyA
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </MyA>
-      </AppHeader>
-    </RootDiv>
+    <>
+    {/* <UseScss></UseScss> */}
+    <UseMemoObj></UseMemoObj>
+    </>
   );
 }
-
+   
 export default App;
