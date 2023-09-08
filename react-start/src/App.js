@@ -4,6 +4,9 @@ import './styles/style.scss';
 import styled, { keyframes } from "styled-components";
 import UseScss from './components/UseScss';
 import UseMemoObj from "./components/05_UseMemoObj";
+import UseCallback from "./components/06_UseCallback";
+import UseReducer from "./components/07_UseReducer";
+import ContextTheme from './components/08_ContextTheme';
 
 function App() {
   // styled-components import
@@ -43,7 +46,11 @@ function App() {
   return (
     <>
     {/* <UseScss></UseScss> */}
-    <UseMemoObj></UseMemoObj>
+    {/* <UseMemoObj></UseMemoObj> */}
+    {/* <UseCallback></UseCallback>
+    <UseReducer></UseReducer> */}
+    {/* <ContextTheme></ContextTheme> */}
+    <ContextTheme />
     </>
   );
 }
