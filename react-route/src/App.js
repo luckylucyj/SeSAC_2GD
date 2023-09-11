@@ -33,12 +33,17 @@
 
 // export default App;
 
+import  "./styles/global.css";
 import { Route, Routes } from "react-router-dom";
 import { Profile } from "./page/Profile";
 import { Board } from "./page/Board";
 import { Index } from "./page/Index";
 import { NotFound } from "./page/NotFound";
 import BoardDetail from "./page/BoardDetail";
+import Navigate from "./components/Navigate";
+import StudentMe from "./components/StudentMe";
+import Practice from "./page/Practice";
+import Student from './page/Student';
 
 function App() {
   return (
@@ -51,16 +56,21 @@ function App() {
           <li>
             <a href="/board">게시판</a>
           </li>
-        </ul>
+        </ul> 
       </nav> */}
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/profile" element={<Profile />}></Route>
+        <Route path="/Profile" element={<Profile />}></Route>
         <Route path="/board" element={<Board />}></Route>
-        <Route path="*" element={<NotFound />} />
         <Route path="/board/:boardID" element={<BoardDetail />} />
+        <Route path="/practice" element={<Practice/>}></Route>
+        {/* 실습 라우팅 */}
+        <Route path="/student/:name" element={<Student />}></Route>
+        <Route path="*" element={<NotFound />} />
         {/* 파라미터는 :boardID값에 담겨있음, :이 중요함-pm 4:13 */}
       </Routes>
+      {/* <Navigate></Navigate> */}
+      {/* <Student></Student> */}
     </>
   );
 }
