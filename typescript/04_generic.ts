@@ -1,7 +1,7 @@
 function printSome<T>(x: T){
   return x;
 }
-//T=x에대한 데이터 타입을 안받음, 사용이유는 any를 써도 되지만 any는 사용을 지양해야 되기 때문에 씀-pm 3:32
+//T=x에대한 데이터 타입을 받음, 사용이유는 any를 써도 되지만 any는 사용을 지양해야 되기 때문에 씀-pm 3:32
 
 printSome<string>('a');
 printSome<boolean>(true);
